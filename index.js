@@ -59,6 +59,5 @@ app.get("/metro/linea/:nombre", (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  debug(err);
   res.status(500).json({ error: true, mensaje: "Error general" });
 });
