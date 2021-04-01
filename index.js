@@ -17,6 +17,7 @@ app.use((req, res, next) => {
   if (metodosNoAceptados.includes(req.method)) {
     res.status(403).json({ error: true, mensaje: "Te pensabas que podías hackerme" });
   }
+  next();
 });
 
 app.get("/metro/lineas", (req, res, next) => {
